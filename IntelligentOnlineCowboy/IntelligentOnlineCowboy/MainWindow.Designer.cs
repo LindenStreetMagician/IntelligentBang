@@ -33,7 +33,6 @@ namespace IntelligentOnlineCowboy
             this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuStrip.SuspendLayout();
@@ -54,7 +53,6 @@ namespace IntelligentOnlineCowboy
             // 
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newGameToolStripMenuItem,
-            this.openToolStripMenuItem,
             this.toolStripSeparator2,
             this.exitToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
@@ -70,15 +68,6 @@ namespace IntelligentOnlineCowboy
             this.newGameToolStripMenuItem.ShowShortcutKeys = false;
             this.newGameToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
             this.newGameToolStripMenuItem.Text = "Új játék";
-            // 
-            // openToolStripMenuItem
-            // 
-            this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
-            this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.ShowShortcutKeys = false;
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.openToolStripMenuItem.Text = "&Open";
             // 
             // toolStripSeparator2
             // 
@@ -114,7 +103,6 @@ namespace IntelligentOnlineCowboy
         private System.Windows.Forms.MenuStrip mainMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newGameToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
