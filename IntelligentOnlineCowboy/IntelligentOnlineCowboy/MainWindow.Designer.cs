@@ -87,6 +87,7 @@ namespace IntelligentOnlineCowboy
             // 
             // contestantTextBox1
             // 
+            this.contestantTextBox1.Enabled = false;
             this.contestantTextBox1.Font = new System.Drawing.Font("Segoe UI", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.contestantTextBox1.Location = new System.Drawing.Point(320, 57);
             this.contestantTextBox1.Name = "contestantTextBox1";
@@ -96,6 +97,7 @@ namespace IntelligentOnlineCowboy
             // 
             // contestantTextBox2
             // 
+            this.contestantTextBox2.Enabled = false;
             this.contestantTextBox2.Font = new System.Drawing.Font("Segoe UI", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.contestantTextBox2.Location = new System.Drawing.Point(320, 390);
             this.contestantTextBox2.Name = "contestantTextBox2";
@@ -121,6 +123,7 @@ namespace IntelligentOnlineCowboy
             // 
             // topicTextBox
             // 
+            this.topicTextBox.Enabled = false;
             this.topicTextBox.Font = new System.Drawing.Font("Segoe UI", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.topicTextBox.Location = new System.Drawing.Point(320, 237);
             this.topicTextBox.Name = "topicTextBox";
