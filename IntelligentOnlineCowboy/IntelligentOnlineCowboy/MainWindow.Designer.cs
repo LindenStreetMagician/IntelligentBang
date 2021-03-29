@@ -38,6 +38,7 @@ namespace IntelligentOnlineCowboy
             this.contestantTextBox1 = new System.Windows.Forms.TextBox();
             this.contestantTextBox2 = new System.Windows.Forms.TextBox();
             this.NextRoundButton = new System.Windows.Forms.Button();
+            this.topicTextBox = new System.Windows.Forms.TextBox();
             this.mainMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,7 +93,6 @@ namespace IntelligentOnlineCowboy
             this.contestantTextBox1.ReadOnly = true;
             this.contestantTextBox1.Size = new System.Drawing.Size(813, 114);
             this.contestantTextBox1.TabIndex = 3;
-            this.contestantTextBox1.Text = "TESZT BLASZT 1";
             // 
             // contestantTextBox2
             // 
@@ -102,11 +102,10 @@ namespace IntelligentOnlineCowboy
             this.contestantTextBox2.ReadOnly = true;
             this.contestantTextBox2.Size = new System.Drawing.Size(813, 114);
             this.contestantTextBox2.TabIndex = 3;
-            this.contestantTextBox2.Text = "TESZT BLASZT 2";
             // 
             // NextRoundButton
             // 
-            this.NextRoundButton.BackColor = System.Drawing.Color.Black;
+            this.NextRoundButton.BackColor = System.Drawing.Color.Transparent;
             this.NextRoundButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.NextRoundButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.NextRoundButton.FlatAppearance.BorderSize = 0;
@@ -120,11 +119,21 @@ namespace IntelligentOnlineCowboy
             this.NextRoundButton.TabIndex = 4;
             this.NextRoundButton.UseVisualStyleBackColor = false;
             // 
+            // topicTextBox
+            // 
+            this.topicTextBox.Font = new System.Drawing.Font("Segoe UI", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.topicTextBox.Location = new System.Drawing.Point(320, 237);
+            this.topicTextBox.Name = "topicTextBox";
+            this.topicTextBox.ReadOnly = true;
+            this.topicTextBox.Size = new System.Drawing.Size(813, 78);
+            this.topicTextBox.TabIndex = 5;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1145, 564);
+            this.Controls.Add(this.topicTextBox);
             this.Controls.Add(this.NextRoundButton);
             this.Controls.Add(this.contestantTextBox2);
             this.Controls.Add(this.contestantTextBox1);
@@ -149,6 +158,7 @@ namespace IntelligentOnlineCowboy
         private System.Windows.Forms.TextBox contestantTextBox1;
         private System.Windows.Forms.TextBox contestantTextBox2;
         private System.Windows.Forms.Button NextRoundButton;
+        private System.Windows.Forms.TextBox topicTextBox;
     }
 }
 
