@@ -38,7 +38,7 @@ namespace IntelligentOnlineCowboy
             this.TopContestantTextBox = new System.Windows.Forms.TextBox();
             this.BottomContestantTextBox = new System.Windows.Forms.TextBox();
             this.NextRoundButton = new System.Windows.Forms.Button();
-            this.topicTextBox = new System.Windows.Forms.TextBox();
+            this.TopicTextBox = new System.Windows.Forms.TextBox();
             this.TopContestantDogedButton = new System.Windows.Forms.Button();
             this.BottomContestantDogedButton = new System.Windows.Forms.Button();
             this.mainMenuStrip.SuspendLayout();
@@ -124,16 +124,16 @@ namespace IntelligentOnlineCowboy
             this.NextRoundButton.UseVisualStyleBackColor = false;
             this.NextRoundButton.Click += new System.EventHandler(this.NextRoundButton_Click);
             // 
-            // topicTextBox
+            // TopicTextBox
             // 
-            this.topicTextBox.Enabled = false;
-            this.topicTextBox.Font = new System.Drawing.Font("Segoe UI", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.topicTextBox.Location = new System.Drawing.Point(320, 251);
-            this.topicTextBox.Name = "topicTextBox";
-            this.topicTextBox.ReadOnly = true;
-            this.topicTextBox.Size = new System.Drawing.Size(813, 78);
-            this.topicTextBox.TabIndex = 5;
-            this.topicTextBox.TextChanged += new System.EventHandler(this.topicTextBox_TextChanged);
+            this.TopicTextBox.Enabled = false;
+            this.TopicTextBox.Font = new System.Drawing.Font("Segoe UI", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TopicTextBox.Location = new System.Drawing.Point(320, 251);
+            this.TopicTextBox.Name = "TopicTextBox";
+            this.TopicTextBox.ReadOnly = true;
+            this.TopicTextBox.Size = new System.Drawing.Size(813, 78);
+            this.TopicTextBox.TabIndex = 5;
+            this.TopicTextBox.TextChanged += new System.EventHandler(this.TopicTextBox_TextChanged);
             // 
             // TopContestantDogedButton
             // 
@@ -145,6 +145,7 @@ namespace IntelligentOnlineCowboy
             this.TopContestantDogedButton.TabIndex = 7;
             this.TopContestantDogedButton.UseVisualStyleBackColor = true;
             this.TopContestantDogedButton.Visible = false;
+            this.TopContestantDogedButton.Click += new System.EventHandler(this.TopContestantDogedButton_Click);
             // 
             // BottomContestantDogedButton
             // 
@@ -156,6 +157,7 @@ namespace IntelligentOnlineCowboy
             this.BottomContestantDogedButton.TabIndex = 7;
             this.BottomContestantDogedButton.UseVisualStyleBackColor = true;
             this.BottomContestantDogedButton.Visible = false;
+            this.BottomContestantDogedButton.Click += new System.EventHandler(this.BottomContestantDogedButton_Click);
             // 
             // MainWindow
             // 
@@ -164,7 +166,7 @@ namespace IntelligentOnlineCowboy
             this.ClientSize = new System.Drawing.Size(1145, 564);
             this.Controls.Add(this.BottomContestantDogedButton);
             this.Controls.Add(this.TopContestantDogedButton);
-            this.Controls.Add(this.topicTextBox);
+            this.Controls.Add(this.TopicTextBox);
             this.Controls.Add(this.NextRoundButton);
             this.Controls.Add(this.BottomContestantTextBox);
             this.Controls.Add(this.TopContestantTextBox);
@@ -188,9 +190,8 @@ namespace IntelligentOnlineCowboy
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.TextBox TopContestantTextBox;
-        private System.Windows.Forms.TextBox contestantTextBox;
         private System.Windows.Forms.Button NextRoundButton;
-        private System.Windows.Forms.TextBox topicTextBox;
+        private System.Windows.Forms.TextBox TopicTextBox;
         private System.Windows.Forms.Button TopContestantDogedButton;
         private System.Windows.Forms.Button BottomContestantDogedButton;
         private System.Windows.Forms.TextBox BottomContestantTextBox;

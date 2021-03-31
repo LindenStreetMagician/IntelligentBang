@@ -17,12 +17,14 @@ namespace IntelligentOnlineCowboy
     public partial class MainWindow : Form
     {
         private List<ContestantModel> _contestants;
+        private List<ContestantModel> _shotContestants;
         private List<TopicModel> _topics;
         private Random _random;
 
         public MainWindow()
         {
             _random = new Random();
+            _shotContestants = new List<ContestantModel>();
             InitializeComponent();
             InitializeContestants();
             InitializeTopics();
@@ -82,7 +84,7 @@ namespace IntelligentOnlineCowboy
             BottomContestantTextBox.Text = secondContestant.ContestantName;
             BottomContestantTextBox.Tag = secondContestant.Id;
 
-            topicTextBox.Text = randomTopic.TopicName;
+            TopicTextBox.Text = randomTopic.TopicName;
 
         }
 
@@ -96,12 +98,37 @@ namespace IntelligentOnlineCowboy
             return _topics[_random.Next(_topics.Count())];
         }
 
-        private void topicTextBox_TextChanged(object sender, EventArgs e)
+        private void EmptyFields()
         {
-            var hasTopic = !string.IsNullOrWhiteSpace(topicTextBox.Text);
+            TopContestantTextBox.Text = "";
+            TopicTextBox.Text = "";
+            BottomContestantTextBox.Text = "";
+        }
+
+        private void TopicTextBox_TextChanged(object sender, EventArgs e)
+        {
+            var hasTopic = !string.IsNullOrWhiteSpace(TopicTextBox.Text);
 
             TopContestantDogedButton.Visible = hasTopic;
             BottomContestantDogedButton.Visible = hasTopic;
+        }
+
+        private void TopContestantDogedButton_Click(object sender, EventArgs e)
+        {
+            var shotContestant = _contestants.First(c => c.Id == (Guid)BottomContestantTextBox.Tag);
+            _shotContestants.Add(shotContestant);
+            _contestants.Remove(shotContestant);
+
+            EmptyFields();
+        }
+
+        private void BottomContestantDogedButton_Click(object sender, EventArgs e)
+        {
+            var shotContestant = _contestants.First(c => c.Id == (Guid)TopContestantTextBox.Tag);
+            _shotContestants.Add(shotContestant);
+            _contestants.Remove(shotContestant);
+
+            EmptyFields();
         }
     }
 }
