@@ -105,6 +105,11 @@ namespace IntelligentOnlineCowboy
             BottomContestantTextBox.Text = "";
         }
 
+        private void RefreshGraveyard()
+        {
+            GraveyardTextBox.Text = string.Join(", ", _shotContestants.Select(sc => sc.ContestantName));
+        }
+
         private void TopicTextBox_TextChanged(object sender, EventArgs e)
         {
             var hasTopic = !string.IsNullOrWhiteSpace(TopicTextBox.Text);
@@ -120,6 +125,7 @@ namespace IntelligentOnlineCowboy
             _contestants.Remove(shotContestant);
 
             EmptyFields();
+            RefreshGraveyard();
         }
 
         private void BottomContestantDogedButton_Click(object sender, EventArgs e)
@@ -129,6 +135,7 @@ namespace IntelligentOnlineCowboy
             _contestants.Remove(shotContestant);
 
             EmptyFields();
+            RefreshGraveyard();
         }
     }
 }

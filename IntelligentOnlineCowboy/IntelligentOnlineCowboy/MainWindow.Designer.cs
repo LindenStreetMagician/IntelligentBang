@@ -41,6 +41,8 @@ namespace IntelligentOnlineCowboy
             this.TopicTextBox = new System.Windows.Forms.TextBox();
             this.TopContestantDogedButton = new System.Windows.Forms.Button();
             this.BottomContestantDogedButton = new System.Windows.Forms.Button();
+            this.GraveyardImageButton = new System.Windows.Forms.Button();
+            this.GraveyardTextBox = new System.Windows.Forms.TextBox();
             this.mainMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -159,11 +161,33 @@ namespace IntelligentOnlineCowboy
             this.BottomContestantDogedButton.Visible = false;
             this.BottomContestantDogedButton.Click += new System.EventHandler(this.BottomContestantDogedButton_Click);
             // 
+            // GraveyardImageButton
+            // 
+            this.GraveyardImageButton.Enabled = false;
+            this.GraveyardImageButton.Image = ((System.Drawing.Image)(resources.GetObject("GraveyardImageButton.Image")));
+            this.GraveyardImageButton.Location = new System.Drawing.Point(12, 602);
+            this.GraveyardImageButton.Name = "GraveyardImageButton";
+            this.GraveyardImageButton.Size = new System.Drawing.Size(164, 125);
+            this.GraveyardImageButton.TabIndex = 8;
+            this.GraveyardImageButton.UseVisualStyleBackColor = true;
+            // 
+            // GraveyardTextBox
+            // 
+            this.GraveyardTextBox.Enabled = false;
+            this.GraveyardTextBox.Location = new System.Drawing.Point(206, 602);
+            this.GraveyardTextBox.Multiline = true;
+            this.GraveyardTextBox.Name = "GraveyardTextBox";
+            this.GraveyardTextBox.ReadOnly = true;
+            this.GraveyardTextBox.Size = new System.Drawing.Size(927, 125);
+            this.GraveyardTextBox.TabIndex = 9;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1145, 564);
+            this.ClientSize = new System.Drawing.Size(1145, 739);
+            this.Controls.Add(this.GraveyardTextBox);
+            this.Controls.Add(this.GraveyardImageButton);
             this.Controls.Add(this.BottomContestantDogedButton);
             this.Controls.Add(this.TopContestantDogedButton);
             this.Controls.Add(this.TopicTextBox);
@@ -195,6 +219,8 @@ namespace IntelligentOnlineCowboy
         private System.Windows.Forms.Button TopContestantDogedButton;
         private System.Windows.Forms.Button BottomContestantDogedButton;
         private System.Windows.Forms.TextBox BottomContestantTextBox;
+        private System.Windows.Forms.Button GraveyardImageButton;
+        private System.Windows.Forms.TextBox GraveyardTextBox;
     }
 }
 
