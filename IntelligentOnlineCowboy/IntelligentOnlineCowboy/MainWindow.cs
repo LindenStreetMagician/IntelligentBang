@@ -58,7 +58,7 @@ namespace IntelligentOnlineCowboy
                 {
                     _contestants.Add(new ContestantModel
                     {
-                        Name = contestantName
+                        ContestantName = contestantName
                     });
                 }
             }
@@ -69,15 +69,15 @@ namespace IntelligentOnlineCowboy
             var firstContestant = GetRandomContestant();
             var secondContestant = GetRandomContestant();
 
-            while (firstContestant.Name == secondContestant.Name)
+            while (firstContestant.ContestantName == secondContestant.ContestantName)
             {
                 secondContestant = GetRandomContestant();
             }
 
             var randomTopic = GetRandomTopic();
 
-            contestantTextBox1.Text = firstContestant.Name;
-            contestantTextBox2.Text = secondContestant.Name;
+            contestantTextBox1.Text = firstContestant.ContestantName;
+            contestantTextBox2.Text = secondContestant.ContestantName;
 
             topicTextBox.Text = randomTopic.TopicName;
 
