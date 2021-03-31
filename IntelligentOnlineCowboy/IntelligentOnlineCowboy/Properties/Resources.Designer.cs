@@ -63,6 +63,26 @@ namespace IntelligentOnlineCowboy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap gravestone {
+            get {
+                object obj = ResourceManager.GetObject("gravestone", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap phewDog {
+            get {
+                object obj = ResourceManager.GetObject("phewDog", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap pistol {
             get {
                 object obj = ResourceManager.GetObject("pistol", resourceCulture);
