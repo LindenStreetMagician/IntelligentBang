@@ -76,8 +76,11 @@ namespace IntelligentOnlineCowboy
 
             var randomTopic = GetRandomTopic();
 
-            contestantTextBox1.Text = firstContestant.ContestantName;
-            contestantTextBox2.Text = secondContestant.ContestantName;
+            TopContestantTextBox.Text = firstContestant.ContestantName;
+            TopContestantTextBox.Tag = firstContestant.Id;
+
+            BottomContestantTextBox.Text = secondContestant.ContestantName;
+            BottomContestantTextBox.Tag = secondContestant.Id;
 
             topicTextBox.Text = randomTopic.TopicName;
 
