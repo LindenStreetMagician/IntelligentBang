@@ -25,6 +25,8 @@ namespace IntelligentOnlineCowboy
         {
             _random = new Random();
             _shotContestants = new List<ContestantModel>();
+            _contestants = new List<ContestantModel>();
+            _topics = new List<TopicModel>();
             InitializeComponent();
             InitializeContestants();
             InitializeTopics();
@@ -32,7 +34,7 @@ namespace IntelligentOnlineCowboy
 
         private void InitializeTopics()
         {
-            _topics = new List<TopicModel>();
+            _topics.Clear();
 
             string topicName;
 
@@ -50,7 +52,7 @@ namespace IntelligentOnlineCowboy
 
         private void InitializeContestants()
         {
-            _contestants = new List<ContestantModel>();
+            _contestants.Clear();
 
             string contestantName;
 
@@ -110,6 +112,28 @@ namespace IntelligentOnlineCowboy
             GraveyardTextBox.Text = string.Join(", ", _shotContestants.Select(sc => sc.ContestantName));
         }
 
+        private void EmptyGraveyard()
+        {
+            GraveyardTextBox.Text = "";
+            _shotContestants.Clear();
+        }
+
+        private void CheckWinner()
+        {
+            if(_contestants.Count() == 1)
+            {
+                var winner = _contestants[0];
+
+                MessageBox.Show($"{winner.ContestantName} lett a győztés és menekült meg az örült lövöldözőtől 🎉🎊", 
+                    "Győztes", 
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Warning);
+
+                InitializeContestants();
+                EmptyGraveyard();
+            }
+        }
+
         private void TopicTextBox_TextChanged(object sender, EventArgs e)
         {
             var hasTopic = !string.IsNullOrWhiteSpace(TopicTextBox.Text);
@@ -126,6 +150,7 @@ namespace IntelligentOnlineCowboy
 
             EmptyFields();
             RefreshGraveyard();
+            CheckWinner();
         }
 
         private void BottomContestantDogedButton_Click(object sender, EventArgs e)
@@ -136,6 +161,7 @@ namespace IntelligentOnlineCowboy
 
             EmptyFields();
             RefreshGraveyard();
+            CheckWinner();
         }
     }
 }
