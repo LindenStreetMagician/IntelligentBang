@@ -95,5 +95,13 @@ namespace IntelligentOnlineCowboy
         {
             return _topics[_random.Next(_topics.Count())];
         }
+
+        private void topicTextBox_TextChanged(object sender, EventArgs e)
+        {
+            var hasTopic = !string.IsNullOrWhiteSpace(topicTextBox.Text);
+
+            TopContestantDogedButton.Visible = hasTopic;
+            BottomContestantDogedButton.Visible = hasTopic;
+        }
     }
 }

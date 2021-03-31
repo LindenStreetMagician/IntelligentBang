@@ -133,9 +133,11 @@ namespace IntelligentOnlineCowboy
             this.topicTextBox.ReadOnly = true;
             this.topicTextBox.Size = new System.Drawing.Size(813, 78);
             this.topicTextBox.TabIndex = 5;
+            this.topicTextBox.TextChanged += new System.EventHandler(this.topicTextBox_TextChanged);
             // 
             // TopContestantDogedButton
             // 
+            this.TopContestantDogedButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TopContestantDogedButton.Image = ((System.Drawing.Image)(resources.GetObject("TopContestantDogedButton.Image")));
             this.TopContestantDogedButton.Location = new System.Drawing.Point(61, 37);
             this.TopContestantDogedButton.Name = "TopContestantDogedButton";
@@ -146,6 +148,7 @@ namespace IntelligentOnlineCowboy
             // 
             // BottomContestantDogedButton
             // 
+            this.BottomContestantDogedButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BottomContestantDogedButton.Image = ((System.Drawing.Image)(resources.GetObject("BottomContestantDogedButton.Image")));
             this.BottomContestantDogedButton.Location = new System.Drawing.Point(61, 410);
             this.BottomContestantDogedButton.Name = "BottomContestantDogedButton";
