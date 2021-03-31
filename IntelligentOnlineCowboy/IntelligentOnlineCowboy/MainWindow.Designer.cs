@@ -39,6 +39,8 @@ namespace IntelligentOnlineCowboy
             this.contestantTextBox2 = new System.Windows.Forms.TextBox();
             this.NextRoundButton = new System.Windows.Forms.Button();
             this.topicTextBox = new System.Windows.Forms.TextBox();
+            this.TopContestantDiedButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.mainMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,16 +134,37 @@ namespace IntelligentOnlineCowboy
             this.topicTextBox.Size = new System.Drawing.Size(813, 78);
             this.topicTextBox.TabIndex = 5;
             // 
+            // TopContestantDiedButton
+            // 
+            this.TopContestantDiedButton.Image = ((System.Drawing.Image)(resources.GetObject("TopContestantDiedButton.Image")));
+            this.TopContestantDiedButton.Location = new System.Drawing.Point(129, 57);
+            this.TopContestantDiedButton.Name = "TopContestantDiedButton";
+            this.TopContestantDiedButton.Size = new System.Drawing.Size(135, 114);
+            this.TopContestantDiedButton.TabIndex = 6;
+            this.TopContestantDiedButton.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(129, 390);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(135, 114);
+            this.button1.TabIndex = 6;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1145, 564);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.TopContestantDiedButton);
             this.Controls.Add(this.topicTextBox);
             this.Controls.Add(this.NextRoundButton);
             this.Controls.Add(this.contestantTextBox2);
             this.Controls.Add(this.contestantTextBox1);
             this.Controls.Add(this.mainMenuStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.mainMenuStrip;
             this.Name = "MainWindow";
             this.Text = "Intelligent Online Cowboy";
@@ -163,6 +186,8 @@ namespace IntelligentOnlineCowboy
         private System.Windows.Forms.TextBox contestantTextBox2;
         private System.Windows.Forms.Button NextRoundButton;
         private System.Windows.Forms.TextBox topicTextBox;
+        private System.Windows.Forms.Button TopContestantDiedButton;
+        private System.Windows.Forms.Button button1;
     }
 }
 
