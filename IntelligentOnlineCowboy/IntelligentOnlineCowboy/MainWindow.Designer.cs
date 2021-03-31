@@ -29,12 +29,12 @@ namespace IntelligentOnlineCowboy
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
-            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.NewGameTool = new System.Windows.Forms.ToolStripMenuItem();
+            this.NewGameContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.TopContestantTextBox = new System.Windows.Forms.TextBox();
             this.BottomContestantTextBox = new System.Windows.Forms.TextBox();
             this.NextRoundButton = new System.Windows.Forms.Button();
@@ -44,12 +44,13 @@ namespace IntelligentOnlineCowboy
             this.GraveyardImageButton = new System.Windows.Forms.Button();
             this.GraveyardTextBox = new System.Windows.Forms.TextBox();
             this.mainMenuStrip.SuspendLayout();
+            this.NewGameContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainMenuStrip
             // 
             this.mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuToolStripMenuItem});
+            this.NewGameTool});
             this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.mainMenuStrip.Name = "mainMenuStrip";
             this.mainMenuStrip.Size = new System.Drawing.Size(1145, 24);
@@ -57,37 +58,27 @@ namespace IntelligentOnlineCowboy
             this.mainMenuStrip.Text = "mainMenuStrip";
             this.mainMenuStrip.TextDirection = System.Windows.Forms.ToolStripTextDirection.Vertical90;
             // 
-            // menuToolStripMenuItem
+            // NewGameTool
             // 
-            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newGameToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.exitToolStripMenuItem});
-            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.menuToolStripMenuItem.Text = "&Menu";
-            this.menuToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            this.NewGameTool.DropDown = this.NewGameContextMenuStrip;
+            this.NewGameTool.Name = "NewGameTool";
+            this.NewGameTool.Size = new System.Drawing.Size(50, 20);
+            this.NewGameTool.Text = "Menu";
+            this.NewGameTool.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             // 
-            // newGameToolStripMenuItem
+            // NewGameContextMenuStrip
             // 
-            this.newGameToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newGameToolStripMenuItem.Image")));
-            this.newGameToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.ShowShortcutKeys = false;
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.newGameToolStripMenuItem.Text = "Új játék";
+            this.NewGameContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.NewGameContextMenuStrip.Name = "contextMenuStrip1";
+            this.NewGameContextMenuStrip.Size = new System.Drawing.Size(115, 26);
+            this.NewGameContextMenuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.NewGameContextMenuStrip_ItemClicked);
             // 
-            // toolStripSeparator2
+            // toolStripMenuItem1
             // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(132, 6);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.exitToolStripMenuItem.Text = "E&xit";
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(114, 22);
+            this.toolStripMenuItem1.Text = "Új Játék";
             // 
             // TopContestantTextBox
             // 
@@ -129,11 +120,12 @@ namespace IntelligentOnlineCowboy
             // TopicTextBox
             // 
             this.TopicTextBox.Enabled = false;
-            this.TopicTextBox.Font = new System.Drawing.Font("Segoe UI", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TopicTextBox.Location = new System.Drawing.Point(320, 251);
+            this.TopicTextBox.Font = new System.Drawing.Font("Segoe UI", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.TopicTextBox.Location = new System.Drawing.Point(320, 220);
+            this.TopicTextBox.Multiline = true;
             this.TopicTextBox.Name = "TopicTextBox";
             this.TopicTextBox.ReadOnly = true;
-            this.TopicTextBox.Size = new System.Drawing.Size(813, 78);
+            this.TopicTextBox.Size = new System.Drawing.Size(813, 145);
             this.TopicTextBox.TabIndex = 5;
             this.TopicTextBox.TextChanged += new System.EventHandler(this.TopicTextBox_TextChanged);
             // 
@@ -201,6 +193,7 @@ namespace IntelligentOnlineCowboy
             this.Text = "Intelligent Online Cowboy";
             this.mainMenuStrip.ResumeLayout(false);
             this.mainMenuStrip.PerformLayout();
+            this.NewGameContextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,10 +202,7 @@ namespace IntelligentOnlineCowboy
         #endregion
 
         private System.Windows.Forms.MenuStrip mainMenuStrip;
-        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem newGameToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem NewGameTool;
         private System.Windows.Forms.TextBox TopContestantTextBox;
         private System.Windows.Forms.Button NextRoundButton;
         private System.Windows.Forms.TextBox TopicTextBox;
@@ -221,6 +211,8 @@ namespace IntelligentOnlineCowboy
         private System.Windows.Forms.TextBox BottomContestantTextBox;
         private System.Windows.Forms.Button GraveyardImageButton;
         private System.Windows.Forms.TextBox GraveyardTextBox;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ContextMenuStrip NewGameContextMenuStrip;
     }
 }
 

@@ -21,6 +21,7 @@ namespace IntelligentOnlineCowboy
             _shotContestants = new List<ContestantModel>();
             _contestants = new List<ContestantModel>();
             _topics = new List<TopicModel>();
+
             InitializeComponent();
             InitializeContestants();
             InitializeTopics();
@@ -136,12 +137,16 @@ namespace IntelligentOnlineCowboy
             BottomContestantDogedButton.Visible = hasTopic;
         }
 
-        private void TopContestantDogedButton_Click(object sender, EventArgs e)
+        private void RemoveContestant(Guid contestantId)
         {
-            var shotContestant = _contestants.First(c => c.Id == (Guid)BottomContestantTextBox.Tag);
+            var shotContestant = _contestants.First(c => c.Id == contestantId);
             _shotContestants.Add(shotContestant);
             _contestants.Remove(shotContestant);
+        }
 
+        private void TopContestantDogedButton_Click(object sender, EventArgs e)
+        {
+            RemoveContestant((Guid)BottomContestantTextBox.Tag);
             EmptyFields();
             RefreshGraveyard();
             CheckWinner();
@@ -149,13 +154,23 @@ namespace IntelligentOnlineCowboy
 
         private void BottomContestantDogedButton_Click(object sender, EventArgs e)
         {
-            var shotContestant = _contestants.First(c => c.Id == (Guid)TopContestantTextBox.Tag);
-            _shotContestants.Add(shotContestant);
-            _contestants.Remove(shotContestant);
-
+            RemoveContestant((Guid)TopContestantTextBox.Tag);
             EmptyFields();
             RefreshGraveyard();
             CheckWinner();
+        }
+
+        private void NewGameContextMenuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            var dialogResult = MessageBox.Show("Újra szeretnéd indítani?", "Újraindítás", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes)
+            {
+                InitializeContestants();
+                InitializeTopics();
+                EmptyFields();
+                EmptyGraveyard();
+            }
         }
     }
 }
