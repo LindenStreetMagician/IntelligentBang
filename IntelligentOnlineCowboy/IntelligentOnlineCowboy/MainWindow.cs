@@ -18,9 +18,11 @@ namespace IntelligentOnlineCowboy
     {
         private List<ContestantModel> _contestants;
         private List<TopicModel> _topics;
+        private Random _random;
 
         public MainWindow()
         {
+            _random = new Random();
             InitializeComponent();
             InitializeContestants();
             InitializeTopics();
@@ -60,6 +62,35 @@ namespace IntelligentOnlineCowboy
                     });
                 }
             }
+        }
+
+        private void NextRoundButton_Click(object sender, EventArgs e)
+        {
+            var firstContestant = GetRandomContestant();
+            var secondContestant = GetRandomContestant();
+
+            while (firstContestant.Name == secondContestant.Name)
+            {
+                secondContestant = GetRandomContestant();
+            }
+
+            var randomTopic = GetRandomTopic();
+
+            contestantTextBox1.Text = firstContestant.Name;
+            contestantTextBox2.Text = secondContestant.Name;
+
+            topicTextBox.Text = randomTopic.TopicName;
+
+        }
+
+        private ContestantModel GetRandomContestant()
+        {
+            return _contestants[_random.Next(_contestants.Count())];
+        }
+
+        private TopicModel GetRandomTopic()
+        {
+            return _topics[_random.Next(_topics.Count())];
         }
     }
 }

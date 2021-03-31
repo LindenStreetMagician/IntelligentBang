@@ -120,6 +120,7 @@ namespace IntelligentOnlineCowboy
             this.NextRoundButton.Size = new System.Drawing.Size(252, 145);
             this.NextRoundButton.TabIndex = 4;
             this.NextRoundButton.UseVisualStyleBackColor = false;
+            this.NextRoundButton.Click += new System.EventHandler(this.NextRoundButton_Click);
             // 
             // topicTextBox
             // 
