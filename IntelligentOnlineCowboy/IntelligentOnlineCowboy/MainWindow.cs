@@ -33,7 +33,7 @@ namespace IntelligentOnlineCowboy
 
             string topicName;
 
-            using (var sr = new StreamReader(@"./Topics.txt"))
+            using (var sr = new StreamReader(@"./Data/Topics.txt"))
             {
                 while ((topicName = sr.ReadLine()) != null)
                 {
@@ -51,7 +51,7 @@ namespace IntelligentOnlineCowboy
 
             string contestantName;
 
-            using(var sr = new StreamReader(@"./Names.txt"))
+            using(var sr = new StreamReader(@"./Data/Names.txt"))
             {
                 while((contestantName = sr.ReadLine()) != null)
                 {
