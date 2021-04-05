@@ -71,6 +71,7 @@ namespace IntelligentOnlineCowboy
             this.NewGameContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
             this.NewGameContextMenuStrip.Name = "contextMenuStrip1";
+            this.NewGameContextMenuStrip.OwnerItem = this.NewGameTool;
             this.NewGameContextMenuStrip.Size = new System.Drawing.Size(115, 26);
             this.NewGameContextMenuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.NewGameContextMenuStrip_ItemClicked);
             // 

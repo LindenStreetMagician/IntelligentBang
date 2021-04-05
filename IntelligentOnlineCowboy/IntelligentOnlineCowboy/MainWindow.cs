@@ -119,7 +119,7 @@ namespace IntelligentOnlineCowboy
             {
                 var winner = _contestants[0];
 
-                MessageBox.Show($"{winner.ContestantName} lett a győztés és menekült meg az örült lövöldözőtől 🎉🎊", 
+                MessageBox.Show($"{winner.ContestantName} lett a győztés! 🎉🎊", 
                     "Győztes", 
                     MessageBoxButtons.OK, 
                     MessageBoxIcon.Warning);
