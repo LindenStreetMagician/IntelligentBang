@@ -10,10 +10,10 @@ namespace IntelligentOnlineCowboy
 {
     public partial class MainWindow : Form
     {
-        private List<ContestantModel> _contestants;
-        private List<ContestantModel> _shotContestants;
-        private List<TopicModel> _topics;
-        private Random _random;
+        private readonly List<ContestantModel> _contestants;
+        private readonly List<ContestantModel> _shotContestants;
+        private readonly List<TopicModel> _topics;
+        private readonly Random _random;
 
         public MainWindow()
         {
@@ -82,6 +82,7 @@ namespace IntelligentOnlineCowboy
             BottomContestantTextBox.Tag = secondContestant.Id;
 
             TopicTextBox.Text = randomTopic.TopicName;
+            TopicTextBox.Tag = randomTopic.Id;
 
         }
 
@@ -144,11 +145,23 @@ namespace IntelligentOnlineCowboy
             _contestants.Remove(shotContestant);
         }
 
+        private void RemoveTopic(Guid topicId)
+        {
+            var spentTopic = _topics.First(c => c.Id == topicId);
+            _topics.Remove(spentTopic);
+
+            if (!_topics.Any())
+            {
+                InitializeTopics();
+            }
+        }
+
         private void TopContestantDogedButton_Click(object sender, EventArgs e)
         {
             RemoveContestant((Guid)BottomContestantTextBox.Tag);
             EmptyFields();
             RefreshGraveyard();
+            RemoveTopic((Guid)TopicTextBox.Tag);
             CheckWinner();
         }
 
@@ -157,6 +170,7 @@ namespace IntelligentOnlineCowboy
             RemoveContestant((Guid)TopContestantTextBox.Tag);
             EmptyFields();
             RefreshGraveyard();
+            RemoveTopic((Guid)TopicTextBox.Tag);
             CheckWinner();
         }
 
