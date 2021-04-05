@@ -43,6 +43,12 @@ namespace IntelligentOnlineCowboy
                     });
                 }
             }
+
+            if (!_topics.Any())
+            {
+                MessageBox.Show("A Topics.txt nem tartalmaz egyetlen témát sem.", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(1);
+            }
         }
 
         private void InitializeContestants()
@@ -60,6 +66,12 @@ namespace IntelligentOnlineCowboy
                         ContestantName = contestantName
                     });
                 }
+            }
+
+            if (_contestants.Count() < 2)
+            {
+                MessageBox.Show("A Names.txt nem tartalmaz legalább 2 nevet.", "Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(1);
             }
         }
 
