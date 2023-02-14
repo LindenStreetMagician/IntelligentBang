@@ -32,6 +32,12 @@ We were short of program ideas and I figured this could be sort of done in a qui
 
 ## The Solution
 
-So I coded up this little winforms application, I really needed to hurry so I didn't have time for a webapp. I also built this project with all it's dependencies so I could forward it to other groups with me having them to install .NET Runtime.
+So I coded up this little winforms application, I really needed to hurry so I didn't have time for a webapp. I also built this project with all it's dependencies (self-contained) so I could forward it to other groups without me having them to install .NET Runtime.
 
 "The person in the middle" was sharing the screen the topics and names were loaded to their respective .txt files and the conducting person just had to click on the gun and names and topics were randomized and if there was a clear winner the conductor had to click the button next to the winner, the other one went to the graveyard :(.
+
+## Further improvements
+
+... but I really hope we will never need these, beacuse that might mean another pandemic 😬
+* Introduce l10n, for now it's hard coded hungarian.
+* Turn this into a webapp for fun.
