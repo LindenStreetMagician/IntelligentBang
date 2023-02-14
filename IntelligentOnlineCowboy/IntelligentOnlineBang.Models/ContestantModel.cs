@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace IntelligentOnlineCowboy.Models
+namespace IntelligentOnlineBang.Models
 {
     public class ContestantModel
     {
