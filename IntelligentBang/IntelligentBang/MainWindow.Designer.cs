@@ -1,5 +1,5 @@
 ﻿
-namespace IntelligentOnlineBang
+namespace IntelligentBang
 {
     partial class MainWindow
     {
@@ -191,7 +191,7 @@ namespace IntelligentOnlineBang
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.mainMenuStrip;
             this.Name = "MainWindow";
-            this.Text = "Intelligent Online Bang";
+            this.Text = "Intelligent Bang";
             this.mainMenuStrip.ResumeLayout(false);
             this.mainMenuStrip.PerformLayout();
             this.NewGameContextMenuStrip.ResumeLayout(false);

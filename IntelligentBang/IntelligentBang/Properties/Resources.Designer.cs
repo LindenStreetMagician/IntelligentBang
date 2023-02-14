@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace IntelligentOnlineBang.Properties {
+namespace IntelligentBang.Properties {
     using System;
     
     

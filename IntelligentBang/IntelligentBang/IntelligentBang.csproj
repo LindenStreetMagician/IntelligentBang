@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IntelligentOnlineBang.Models\IntelligentOnlineBang.Models.csproj" />
+    <ProjectReference Include="..\IntelligentBang.Models\IntelligentBang.Models.csproj" />
   </ItemGroup>
 
   <ItemGroup>

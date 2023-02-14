@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntelligentOnlineBang", "IntelligentOnlineBang\IntelligentOnlineBang.csproj", "{E8A1F70E-076B-4511-B146-A779A8678F5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntelligentBang", "IntelligentBang\IntelligentBang.csproj", "{E8A1F70E-076B-4511-B146-A779A8678F5F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntelligentOnlineBang.Models", "IntelligentOnlineBang.Models\IntelligentOnlineBang.Models.csproj", "{0C2ED5B0-3489-40CD-8C48-51F4EFA32F58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntelligentBang.Models", "IntelligentBang.Models\IntelligentBang.Models.csproj", "{0C2ED5B0-3489-40CD-8C48-51F4EFA32F58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

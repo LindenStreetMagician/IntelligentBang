@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace IntelligentOnlineBang
+namespace IntelligentBang
 {
     static class Program
     {

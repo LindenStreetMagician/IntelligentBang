@@ -1,4 +1,4 @@
-﻿using IntelligentOnlineBang.Models;
+﻿using IntelligentBang.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace IntelligentOnlineBang
+namespace IntelligentBang
 {
     public partial class MainWindow : Form
     {

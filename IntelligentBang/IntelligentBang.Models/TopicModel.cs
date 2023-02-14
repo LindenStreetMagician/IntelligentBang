@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace IntelligentOnlineBang.Models
+namespace IntelligentBang.Models
 {
     public class TopicModel
     {
