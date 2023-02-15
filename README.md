@@ -18,7 +18,8 @@ One of the games we like to play on the first 2 trainings is called "Bang!" as a
 The rules are:
 * The person in the middle points at random people in the circle.
 * The person whom was pointed at must duck as fast as possible. if this person fails to duck before shots are fired the person is the one being eliminated.
-* The people standing on the ducking person's each side have to yell the other's standing person's name faster with a fingerbang gesture wins that round and the other one is eliminated.
+* The people standing on the ducking person's each side have to yell the name of the other standing person faster along with a fingerbang gesture wins. The faster person wins round and the other one is eliminated.
+* It goes on until there is only 1 left, the winner.
 
 Rather simple game, right? Well unfortunately not online...
 
