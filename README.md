@@ -40,5 +40,5 @@ So I coded up this little winforms application, I really needed to hurry so I di
 ## Further improvements
 
 ... but I really hope we will never need these, beacuse that might mean another pandemic 😬
-* Introduce l10n, for now it's hard coded hungarian.
+* Introduce i18n, for now it's hard coded hungarian.
 * Turn this into a webapp for fun.
